@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-    var url = "https://randomuser.me/api/?results=1";
+    var url = "https://randomuser.me/api/?results=3";
     var p = "";
     var radioValue;
     var selectedNationality;
@@ -12,7 +12,7 @@ $(document).ready(function () {
         radioValue = $("input[name='gender']:checked").val();
         selectedNationality = $('#nationality :selected').text();
         $("#result").empty();
-        url = "https://randomuser.me/api/?results=1&gender=" + radioValue + "&nat=" + selectedNationality;
+        url = "https://randomuser.me/api/?results=3&gender=" + radioValue + "&nat=" + selectedNationality;
         if (radioValue) {
             fetchInformation(url);
         }
@@ -22,7 +22,7 @@ $(document).ready(function () {
         var p = "";
         $("#result").empty();
         selectedNationality = $('#nationality :selected').text();
-        url = "https://randomuser.me/api/?results=1&gender=" + radioValue + "&nat=" + selectedNationality;
+        url = "https://randomuser.me/api/?results=3&gender=" + radioValue + "&nat=" + selectedNationality;
         fetchInformation(url);
     });
 
